@@ -6,7 +6,11 @@ function Homepage() {
         <>
             <h1>Simple Blog</h1>
             {posts.map((blog) => (
-                <Article title={blog.title} tags={blog.tags} date={blog.date} />
+                <Article 
+                    key={blog.id}
+                    title={blog.title}
+                    tags={blog.tags}
+                    date={blog.date} />
             ))}
         </>
     );
