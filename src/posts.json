@@ -2,16 +2,19 @@
     {
         "title": "Belajar ReactJs Dasar",
         "tags": ["React", "Frontend"],
-        "date": "2024-01-09"
+        "date": "2024-01-09",
+        "isNew": true
     },
     {
         "title": "Meningkatkan performa di ReactJs",
         "tags": ["React", "Frontend"],
-        "date": "2024-01-09"
+        "date": "2024-01-09",
+        "isNew": false
     },
     {
         "title": "Cara menggunakan MUI",
         "tags": ["React", "Css"],
-        "date": "2024-01-09"
+        "date": "2024-01-09",
+        "isNew": false
     }
 ]
