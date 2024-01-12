@@ -22,6 +22,14 @@ function Homepage() {
         .then((json) => setExternalPosts(json))
     }, [])
 
+    useEffect(() => {
+        console.log("ada post baru")
+    }, [posts])
+
+    useEffect(() => {
+        console.log("render")
+    })
+
     return (
         <>
             <h1>Simple Blog</h1>
@@ -31,9 +39,11 @@ function Homepage() {
             ))}
             <hr />
             <h2>External Posts: </h2>
-            {externalPosts.map((item, index) => (
-                <div key={index}>- {item.title}</div>
-            ))}
+            <ol>
+                {externalPosts.map((item, index) => (
+                    <li key={index}>{item.title}</li>
+                ))}
+            </ol>
         </>
     );
 }
