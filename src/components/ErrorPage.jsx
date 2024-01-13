@@ -4,7 +4,7 @@ import { useRouteError } from "react-router-dom";
 function ErrorPage () {
     const error = useRouteError();
 
-    return <div>Error Gess!!!{error}</div>
+    return <div>Error Gess!!!</div>
 }
 
 export default ErrorPage;
