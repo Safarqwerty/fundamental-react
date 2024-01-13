@@ -3,6 +3,7 @@ import RootLayout from "../layouts/RootLayout";
 import Homepage from "../pages/Index";
 import About from "../pages/About";
 import Blog from "../pages/blogs";
+import Post from "../pages/blogs/_id"
 
 
 export const router = createBrowserRouter([
@@ -15,11 +16,15 @@ export const router = createBrowserRouter([
                 element: <Homepage />
             },
             {
-                path: "blog",
+                path: "/blog",
                 element: <Blog />
             },
             {
-                path: "about",
+                path: "/blog/:id",
+                element: <Post />
+            },
+            {
+                path: "/about",
                 element: <About />
             }
         ]
