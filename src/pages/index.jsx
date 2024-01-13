@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import postsData from "../posts.json";
 import Article from "../components/Article";
 import Search from "../components/Search";
@@ -6,7 +6,7 @@ import Search from "../components/Search";
 function Homepage() {
     const [posts, setPosts] = useState(postsData);
     const [totalPosts, setTotalPosts] = useState(0);
-    const [externalPosts, setExternalPosts] = useState([])
+    // const [externalPosts, setExternalPosts] = useState([])
 
     const onSearchChange = (value) => {
         const filteredPosts = postsData.filter((item) =>
@@ -16,19 +16,19 @@ function Homepage() {
         setTotalPosts(filteredPosts.length)
     }
 
-    useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/todos')
-        .then(response => response.json())
-        .then((json) => setExternalPosts(json))
-    }, [])
+    // useEffect(() => {
+    //     fetch('https://jsonplaceholder.typicode.com/todos')
+    //     .then(response => response.json())
+    //     .then((json) => setExternalPosts(json))
+    // }, [])
 
-    useEffect(() => {
-        console.log("ada post baru")
-    }, [posts])
+    // useEffect(() => {
+    //     console.log("ada post baru")
+    // }, [posts])
 
-    useEffect(() => {
-        console.log("render")
-    })
+    // useEffect(() => {
+    //     console.log("render")
+    // })
 
     return (
         <>
@@ -37,13 +37,13 @@ function Homepage() {
             {posts.map((props, index) => (
             <Article {...props} key={index} />
             ))}
-            <hr />
+            {/* <hr />
             <h2>External Posts: </h2>
             <ol>
                 {externalPosts.map((item, index) => (
                     <li key={index}>{item.title}</li>
                 ))}
-            </ol>
+            </ol> */}
         </>
     );
 }
